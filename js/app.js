@@ -1,7 +1,6 @@
 // PERSON 4
 function person4Request() {
   let object = JSON.parse(this.responseText);
-  console.log(object);
   document.querySelector("#person4Name").innerHTML =
     "My name is " + object.name;
 
@@ -50,7 +49,6 @@ person14.send();
 // FILM AND PLANETS
 function filmRequest() {
   let object = JSON.parse(this.responseText);
-  console.log(object.results);
 
   // cycle through list of film objects
   for (let i = 0; i < object.results.length; i++) {
@@ -86,7 +84,6 @@ function filmRequest() {
         planet.className = "planet";
         planet.innerHTML = planetObj.name; // extract planet name for each element
         filmPlanets.appendChild(planet);
-        console.log(planetObj);
       }
       // END OF PLANET REQUEST
     }
